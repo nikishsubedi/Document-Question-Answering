@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ask a Question</title>
+    <link rel="stylesheet" type="text/css" href="static/qans.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ask a Question</h1>
+    </header>
+    <main>
+        <form action="{{url_for('get_QN')}}" method="POST">
+            <label for="question">Do you have any questions?</label>
+            <input type="text" id="question" name="question"
+                title="Please enter a valid question (no special characters, and cannot start with a number)"
+                placeholder="Type your question here..." required>
+            <button type="submit">Submit</button>
+        </form>
+        <p class="answer">Answer: {{answer}}</p>
+        <a href="{{url_for('index')}}">Go back to Home</a>
+    </main>
+</body>
+
+</html>
